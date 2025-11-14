@@ -1,0 +1,10 @@
+{
+  "buildCommand": "npx vite build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "vite",
+  "env": {
+    "VITE_WALLETCONNECT_PROJECT_ID": "1eebe528ca0ce94a99ceaa2e915058d7"
+  }
+}
