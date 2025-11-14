@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { useAccount, useWatchBlockNumber } from 'wagmi'
+import { useAccount, useDisconnect, useWatchBlockNumber } from 'wagmi'
+import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { ethers } from "ethers";
+import { BrowserProvider, Contract } from "ethers";
 import { useWalletInfo } from '@reown/appkit/react'
 
 import { Greeter__factory, StandardToken__factory } from "./types";
@@ -32,13 +32,13 @@ function App() {
     }
   }, [isConnected, address]);
 
-  // Get ethers provider from wagmi (ethers v5)
+  // Get ethers provider from wagmi
   async function getEthersProvider() {
     if (typeof window.ethereum === 'undefined') {
       throw new Error('No ethereum provider found');
     }
 
-    return new ethers.providers.Web3Provider(window.ethereum);
+    return new BrowserProvider(window.ethereum);
   }
 
   // Get signer from provider

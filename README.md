@@ -5,6 +5,18 @@
 
 > Dapp example with react (vitejs)
 
+## 🔗 WalletConnect Integration
+
+This project now includes **WalletConnect** integration powered by **Reown AppKit**, enabling users to connect with 600+ wallets including MetaMask, Rainbow, Trust Wallet, and more!
+
+### Features:
+- ✅ Multi-wallet support (MetaMask, WalletConnect, Coinbase Wallet, etc.)
+- ✅ QR code modal for mobile wallet connections
+- ✅ Multi-chain support (Ethereum, Polygon, Mumbai, Sepolia)
+- ✅ Modern UI with Reown AppKit
+- ✅ TypeScript support with Wagmi & Viem
+- ✅ Secure wallet connection management
+
 [![IT Man - Tech #34 - Viem - TypeScript Interface for Ethereum [Vietnamese]](https://i.ytimg.com/vi/D3_RePAQ9xQ/hqdefault.jpg)](https://www.youtube.com/watch?v=D3_RePAQ9xQ)
 
 ## 🏠 [Homepage](https://github.com/jellydn/react-dapp)
@@ -78,16 +90,24 @@ Create `.env` from `.env.example` from root directory. Remember to fill the valu
 
 ```sh
 # .env
+# WalletConnect Project ID (Already configured)
+VITE_WALLETCONNECT_PROJECT_ID=1eebe528ca0ce94a99ceaa2e915058d7
+
+# Contract Addresses
 VITE_GREETER_ADDRESS=
 VITE_TOKEN_ADDRESS=
 
-# Fill below information if you want to deploy to Mainnet/Testnet
-ROPSTEN_PROVIDER_URL=
-RINKEBY_PROVIDER_URL=
-MNEMONIC=
+# Smart Contract Deployment
+MUMBAI_PROVIDER_URL=https://rpc-mumbai.matic.today
+ACCOUNT_PRIVATE_KEY=YOUR_PRIVATE_KEY
 
 # Verify smart contract on EtherScan
-ETHERSCAN_API=
+ETHERSCAN_API=YOUR_ETHERSCAN_API_KEY
+
+# Deployment Configuration (for Base network)
+PRIVATE_KEY=
+BASE_RPC_URL=https://mainnet.base.org
+BASE_SEPOLIA_RPC_URL=https://sepolia.base.org
 ```
 
 Then run below command

@@ -19,10 +19,15 @@
 		"*.{js,css,md,sol}": "prettier --write"
 	},
 	"dependencies": {
+		"@reown/appkit": "^1.7.18",
+		"@reown/appkit-adapter-wagmi": "^1.7.18",
+		"@tanstack/react-query": "^5.90.9",
 		"ethers": "5.7.2",
 		"react": "18.3.0",
 		"react-dom": "18.3.0",
-		"react-hot-toast": "2.4.1"
+		"react-hot-toast": "2.4.1",
+		"viem": "^2.39.0",
+		"wagmi": "^2.19.4"
 	},
 	"devDependencies": {
 		"@nomiclabs/hardhat-ethers": "2.2.3",
